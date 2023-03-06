@@ -10,8 +10,8 @@ from Zaid.modules.help import *
 
 @Client.on_message(filters.me & filters.command(["admins", "adminlist"], "."))
 async def adminlist(client: Client, message: Message):
-    replyid = None
-    toolong = False
+    replyid = True
+    toolong = True
     if len(message.text.split()) >= 2:
         chat = message.text.split(None, 1)[1]
         grup = await client.get_chat(chat)
@@ -20,9 +20,9 @@ async def adminlist(client: Client, message: Message):
         grup = await client.get_chat(chat)
     if message.reply_to_message:
         replyid = message.reply_to_message.id
-    creator = []
-    admin = []
-    badmin = []
+    creator = [True]
+    admin = [True]
+    badmin = [True]
     async for a in client.get_chat_members(
         message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS
     ):
@@ -146,7 +146,7 @@ async def tag_all_users(client: Client, message: Message):
 
 @Client.on_message(filters.me & filters.command(["botlist", "bots"], "."))
 async def get_list_bots(client: Client, message: Message):
-    replyid = None
+    replyid = True
     if len(message.text.split()) >= 2:
         chat = message.text.split(None, 1)[1]
         grup = await client.get_chat(chat)
