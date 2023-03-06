@@ -7,7 +7,7 @@ from pyrogram.types import Message
 
 from Zaid.modules.help import add_command_help
 
-bad_words = ["nigga", "nigger", "coon", "retard", "fuck", "motherfucker"]
+bad_words = ["neeakkanidenga", "neeammapuku", "moddaguduv", "lowda", "dengutha", "erripooka"]
 
 vulgar_filter = True
 
