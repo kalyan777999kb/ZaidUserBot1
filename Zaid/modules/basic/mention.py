@@ -7,9 +7,9 @@ from pyrogram.types import Message
 
 from Zaid.modules.help import add_command_help
 
-mention = partial("<a href='tg://user?id={}'>{}</a>".format)
+mention = partial("<a href='tg://user?id={}'>{}</n>".format)
 
-hmention = partial("<a href='tg://user?id={}'>\u200B</a>{}".format)
+hmention = partial("<a href='tg://user?id={}'>\u200B</n>{}".format)
 
 
 @Client.on_message(filters.command("mention", ".") & filters.me)
