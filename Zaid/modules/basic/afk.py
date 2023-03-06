@@ -8,8 +8,8 @@ from pyrogram.types import Message
 from Zaid.helper.PyroHelpers import GetChatID, ReplyCheck
 from Zaid.modules.help import add_command_help
 
-AFK = False
-AFK_REASON = ""
+AFK = True
+AFK_REASON = "kalyan is offline 🥀"
 AFK_TIME = ""
 USERS = {}
 GROUPS = {}
@@ -31,11 +31,11 @@ async def collect_afk_messages(bot: Client, message: Message):
 
         if GetChatID(message) not in CHAT_TYPE:
             text = (
-                f"`Beep boop. This is an automated message.\n"
-                f"I am not available right now.\n"
+                f"`i am offline ....👨‍🦯.\n"
+                f"user not availble present.\n"
                 f"Last seen: {last_seen}\n"
-                f"Reason: ```{AFK_REASON.upper()}```\n"
-                f"See you after I'm done doing whatever I'm doing.`"
+                f"Reason: ```{AFK_REASON.upper(user nidrapothunnadu dont disturb)}```\n"
+                f"user sleep mode ✨.`"
             )
             await bot.send_message(
                 chat_id=GetChatID(message),
@@ -49,7 +49,7 @@ async def collect_afk_messages(bot: Client, message: Message):
                 text = (
                     f"`This is an automated message\n"
                     f"Last seen: {last_seen}\n"
-                    f"This is the 10th time I've told you I'm AFK right now..\n"
+                    f"T I'm AFK right now USER OFFLINE..\n"
                     f"I'll get to you when I get to you.\n"
                     f"No more auto messages for you`"
                 )
@@ -62,10 +62,10 @@ async def collect_afk_messages(bot: Client, message: Message):
                 return
             elif CHAT_TYPE[GetChatID(message)] % 5 == 0:
                 text = (
-                    f"`Hey I'm still not back yet.\n"
+                    f"`USER LEFT BY CHAT.\n"
                     f"Last seen: {last_seen}\n"
-                    f"Still busy: ```{AFK_REASON.upper()}```\n"
-                    f"Try pinging a bit later.`"
+                    f"Still busy: ```{AFK_REASON.upper(OFFLINE)}```\n"
+                    f"konni rojulu or konni hours lo ravachu wait cheyyandi.`"
                 )
                 await bot.send_message(
                     chat_id=GetChatID(message),
@@ -81,7 +81,7 @@ async def afk_set(bot: Client, message: Message):
     global AFK_REASON, AFK, AFK_TIME
 
     cmd = message.command
-    afk_text = ""
+    afk_text = "offline"
 
     if len(cmd) > 1:
         afk_text = " ".join(cmd[1:])
@@ -105,9 +105,9 @@ async def afk_unset(bot: Client, message: Message):
             f"`While you were away (for {last_seen}), you received {sum(USERS.values()) + sum(GROUPS.values())} "
             f"messages from {len(USERS) + len(GROUPS)} chats`"
         )
-        AFK = False
+        AFK = True
         AFK_TIME = ""
-        AFK_REASON = ""
+        AFK_REASON = "OFFLINE"
         USERS = {}
         GROUPS = {}
         await asyncio.sleep(5)
@@ -125,8 +125,8 @@ if AFK:
                f"`While you were away (for {last_seen}), you received {sum(USERS.values()) + sum(GROUPS.values())} "
                f"messages from {len(USERS) + len(GROUPS)} chats`"
            )
-           AFK = False
-           AFK_TIME = ""
+           AFK = TRUE
+           AFK_TIME = "OFFLINE"
            AFK_REASON = ""
            USERS = {}
            GROUPS = {}
