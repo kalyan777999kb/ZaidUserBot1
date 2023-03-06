@@ -11,12 +11,12 @@ API_HASH = getenv("API_HASH", "5f4dcf21daeac7c01bb229e3e3349f3d") #optional
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5655356960").split()))
 OWNER_ID = int(getenv("OWNER_ID",  "5655356960"))
-MONGO_URL = getenv("MONGO_URL",  "mongodb+srv://king777:kalyan@cluster0.zco8nze.mongodb.net/?retryWrites=true&w=majority")
+MONGO_URL = getenv("MONGO_URL",  "mongodb+srv://varmadivya:varmadivya@dividillu.dm5us5x.mongodb.net/?retryWrites=true&w=majority")
 BOT_TOKEN = getenv("BOT_TOKEN", "5811227919:AAEMweZWcmHjmz3uh5PfNzl8ONtufwiRPq4")
-ALIVE_PIC = getenv("ALIVE_PIC", 'https://telegra.ph/file/3c52a01057865f7511168.jpg')
-ALIVE_TEXT = getenv("ALIVE_TEXT")
-PM_LOGGER = getenv("PM_LOGGER")
-LOG_GROUP = getenv("LOG_GROUP")
+ALIVE_PIC = getenv("ALIVE_PIC", 'https://te.legra.ph/file/5e11fae6c913888a27c2b.jpg')
+ALIVE_TEXT = getenv("ALIVE_TEXT",  "kalyan babu")
+PM_LOGGER = getenv("PM_LOGGER",  "True")
+LOG_GROUP = getenv("LOG_GROUP",  "-1001642786913")
 GIT_TOKEN = getenv("GIT_TOKEN") #personal access token
 REPO_URL = getenv("REPO_URL", "https://github.com/ITZ-ZAID/ZAID-USERBOT")
 BRANCH = getenv("BRANCH", "master") #don't change
